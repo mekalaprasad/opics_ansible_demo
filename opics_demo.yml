@@ -1,0 +1,8 @@
+---
+- name: Restarting the Jenkins Service
+#  hosts: windows
+  tasks:
+    - name: Restart a service
+      win_service:
+        name: spooler
+        state: restarted
