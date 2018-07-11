@@ -1,0 +1,30 @@
+---
+- name: Restarting the Jenkins Service
+  hosts: windows
+
+  tasks:
+    - name: Restart Jenkins
+      win_service:
+        name: Jenkins
+		state: restarted
+
+#    - debug:
+#      msg: 'Jenkins Service has been stopped successfully'
+#    - name: Installing Python
+#     win_msi:
+#        path: 'C:\stores_c\python-2.7.8.msi'
+#        state: absent
+#      state: present
+#    - name: Starting Jenkins Slave
+#      win_command: 'C:\Jenkins\start_Jenkins.bat'
+#    - name: Download the 7-zip package
+#      win_get_url:
+#        url: http://www.7-zip.org/a/7z1701-x64.msi
+#        dest: C:\7zip\7z.msi
+#    - name: Check if 7-ZIp already Installed
+#      win_reg_stat:
+#        path: 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{23170F69-40C1-2702-1701-000001000000}'
+#      register: Installed_7zip
+#    - name: Install 7Zip using win-comand
+#      win_command: C:\Windows\System32\msiexec.exe /i C:\7zip\7z.msi /qn /norestart
+#      when: Installed_7zip.exists == False
