@@ -1,12 +1,11 @@
 ---
 - name: Restarting the Jenkins Service
-  hosts: windows
-
+#  hosts: windows
   tasks:
-    - name: Restart Jenkins
+    - name: Restart a service
       win_service:
-        name: Jenkins
-		state: restarted
+        name: spooler
+        state: restarted
 
 #    - debug:
 #      msg: 'Jenkins Service has been stopped successfully'

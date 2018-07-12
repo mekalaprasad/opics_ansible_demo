@@ -1,3 +1,4 @@
+---
 - name: Install IIS
   hosts: localhost
   gather_facts: false

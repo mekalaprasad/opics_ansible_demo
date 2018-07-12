@@ -65,7 +65,7 @@
     paths: D:\Temp
     size: 1048576
 
-	Windows6.1-KB2819745-x64-MultiPkg
+	
 - name: Find files larger than 1GB with unit syntax
   win_find:
     paths: D:\Temp
